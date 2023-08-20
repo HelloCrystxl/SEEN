@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://ecus2uutkbyv"]
+
+[ext_resource type="Script" path="res://UI/credits.gd" id="1_26pxc"]
+[ext_resource type="FontFile" uid="uid://dpurp6md8xx6r" path="res://UI/Font/SuperPixels-Regular.ttf" id="2_itj43"]
+[ext_resource type="TileSet" uid="uid://ogq2ed0qmqh0" path="res://Maps/Ground_Set_1.tres" id="3_t07nv"]
+[ext_resource type="AudioStream" uid="uid://xefeljtb3pnn" path="res://Audio/Music/NikiN - 80s Retro Horror Intro Logo.wav" id="4_qrtaa"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_26pxc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 321.0
+offset_bottom = 210.0
+color = Color(0, 0, 0, 1)
+
+[node name="TileMap3" type="TileMap" parent="."]
+position = Vector2(-65, 228)
+tile_set = ExtResource("3_t07nv")
+format = 2
+layer_0/tile_data = PackedInt32Array(-262141, 1835008, 3, -196605, 1900544, 2, -327677, 1835008, 2, -262140, 1835008, 2, -196604, 2490368, 11, -327676, 2490368, 11, -262139, 1835008, 2, -196603, 2490368, 11, -327675, 1835008, 2, -262138, 1900544, 3, -196602, 1900544, 3, -327674, 2490368, 11, -262137, 1835008, 2, -196601, 1835008, 3, -327673, 1835008, 3, -262136, 1835008, 2, -196600, 1900544, 3, -327672, 1900544, 3, -262135, 1835008, 3, -196599, 1900544, 3, -327671, 2490368, 11, -196598, 1900544, 2, -196597, 2490368, 11, -196596, 1835008, 2, -196595, 1835008, 3, -196594, 1835008, 2, -196593, 2490368, 11, -196592, 1900544, 3, -262127, 1900544, 2, -196591, 2490368, 11, -262126, 1900544, 3, -196590, 1835008, 3, -327662, 1900544, 2, -196589, 2490368, 11, -327661, 1900544, 2, -262124, 2490368, 11, -196588, 2490368, 11, -327660, 2490368, 11, -262123, 1835008, 2, -196587, 1835008, 3, -327659, 1835008, 3, -262122, 1835008, 2, -196586, 1900544, 3, -327658, 1900544, 2, -262121, 2490368, 11, -196585, 1835008, 2, -327657, 1835008, 3, -262120, 1835008, 2, -196584, 2490368, 11, -327656, 1835008, 3, -196583, 1966080, 2, -262142, 1769472, 2, -327678, 1769472, 2, -393214, 1769472, 1, -393213, 1835008, 1, -393212, 1835008, 1, -196606, 1769472, 2, -131068, 2359296, 1, -131069, 2293760, 1, -131070, 2228224, 1, -393211, 1835008, 1, -131067, 2293760, 1, -393210, 1900544, 1, -131066, 2359296, 1, -393209, 1900544, 1, -131065, 2293760, 1, -393208, 1835008, 1, -131064, 2293760, 1, -393207, 1835008, 1, -131063, 2359296, 1, -393206, 1245184, 5, -131062, 2293760, 1, -393205, 1245184, 5, -393204, 1179648, 5, -393203, 1245184, 5, -393202, 1179648, 5, -393201, 1245184, 5, -393200, 1179648, 5, -393199, 1245184, 5, -131055, 2293760, 1, -393198, 1900544, 1, -131054, 2293760, 1, -393197, 1900544, 1, -131053, 2293760, 1, -393196, 1835008, 1, -131052, 2293760, 1, -393195, 1900544, 1, -131051, 2293760, 1, -393194, 1835008, 1, -131050, 2293760, 1, -393193, 1900544, 1, -131049, 2359296, 1, -393192, 1900544, 1, -131048, 2359296, 1, -327655, 1966080, 2, -262119, 1966080, 2, -393191, 1966080, 1, -131047, 2424832, 1, -131056, 2359296, 1, -131057, 2293760, 1, -131058, 2359296, 1, -131059, 2293760, 1, -131060, 2293760, 1, -131061, 2359296, 1, -262128, 1835008, 3, -262129, 1835008, 3, -262130, 1900544, 3, -262131, 1835008, 3, -262132, 1900544, 3, -262133, 1900544, 3, -262134, 1900544, 2, -851964, 524291, 1, -458729, 720899, 5, -655355, 393217, 2, -589819, 393217, 3, -524283, 393217, 4, -655354, 458753, 2, -589818, 458753, 3, -524282, 458753, 4, -458746, 458753, 5, -655353, 524289, 2, -589817, 524289, 3, -524281, 524289, 4, -458745, 524289, 5, -655352, 589825, 2, -589816, 589825, 3, -524280, 589825, 4, -917484, 524291, 1, -262125, 1900544, 2)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 78.0
+offset_top = 50.0
+offset_right = 226.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 8
+text = "Developed by hellocrystxl"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 88.0
+offset_top = 88.0
+offset_right = 200.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 6
+text = "Sprites:
+1Bit Dungeon Tiles by Hyell
+Pixel Art 1 Bit by Kreakoon
+"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 184.0
+offset_top = 88.0
+offset_right = 304.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 6
+text = "Music
+Dark Sad Background by plastic3
+80s Retro Horror Intro by NikiNPhaser"
+
+[node name="Title" type="Label" parent="."]
+offset_left = 94.0
+offset_top = 24.0
+offset_right = 227.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_itj43")
+theme_override_font_sizes/font_size = 31
+text = "SEEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MainButton" type="Button" parent="."]
+offset_left = 94.0
+offset_top = 138.0
+offset_right = 226.0
+offset_bottom = 162.0
+theme_override_fonts/font = ExtResource("2_itj43")
+theme_override_font_sizes/font_size = 14
+text = "Main Menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MainButton"]
+stream = ExtResource("4_qrtaa")
+autoplay = true
+
+[connection signal="pressed" from="MainButton" to="." method="_on_main_button_pressed"]

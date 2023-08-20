@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cu6nc70hqfnkp"
+path="res://.godot/imported/Power Retro Jump.wav-3a8b5346e137304a3768aed63d42f120.sample"
+
+[deps]
+
+source_file="res://Audio/Power Retro Jump.wav"
+dest_files=["res://.godot/imported/Power Retro Jump.wav-3a8b5346e137304a3768aed63d42f120.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
