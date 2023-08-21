@@ -20,6 +20,18 @@ height = 15.5
 
 [sub_resource type="Animation" id="Animation_yqx80"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_epc02"]
 resource_name = "attack1"
@@ -470,7 +482,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_1rr8m"]
 resource_name = "jump_end"
-length = 0.001
+length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -794,14 +806,12 @@ script = ExtResource("1_m4sg7")
 texture = ExtResource("1_8efrt")
 hframes = 7
 vframes = 7
-frame = 29
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_d8m6l")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-playback_process_mode = 0
 libraries = {
 "": SubResource("AnimationLibrary_qhh7r")
 }
@@ -811,11 +821,8 @@ tree_root = SubResource("AnimationNodeStateMachine_f02mi")
 anim_player = NodePath("../AnimationPlayer")
 parameters/XMove/blend_position = 0
 
-[node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("character", "animation_tree", "current_state")]
+[node name="CharacterStateMachine" type="Node" parent="."]
 script = ExtResource("3_n1nwm")
-character = NodePath("..")
-animation_tree = NodePath("../AnimationTree")
-current_state = NodePath("Ground")
 
 [node name="Ground" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("air_state", "attack_state")]
 script = ExtResource("4_v65gc")
@@ -836,6 +843,7 @@ landing_animation = "jump_end"
 
 [node name="Landing" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state")]
 script = ExtResource("6_r2xwy")
+landing_animation_name = "jump_end"
 ground_state = NodePath("../Ground")
 
 [node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("return_state")]
@@ -888,7 +896,6 @@ script = ExtResource("13_5hlif")
 
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Landing" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_finished"]
-[connection signal="inturrupt_state" from="CharacterStateMachine/Landing" to="CharacterStateMachine/Landing" method="_on_inturrupt_state"]
 [connection signal="body_entered" from="Sword" to="Sword" method="_on_body_entered"]
 
 [editable path="FollowCamera2"]

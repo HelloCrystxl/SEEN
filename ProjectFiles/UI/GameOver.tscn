@@ -55,7 +55,7 @@ theme_override_font_sizes/font_size = 16
 text = "GAMEOVER :(
 "
 
-[node name="MainButton" type="Button" parent="."]
+[node name="MainMButton" type="Button" parent="."]
 offset_left = 94.0
 offset_top = 138.0
 offset_right = 226.0
@@ -69,4 +69,4 @@ position = Vector2(94, 138)
 stream = ExtResource("5_pvtov")
 autoplay = true
 
-[connection signal="pressed" from="MainButton" to="." method="_on_main_button_pressed"]
+[connection signal="pressed" from="MainMButton" to="." method="_on_main_m_button_pressed"]

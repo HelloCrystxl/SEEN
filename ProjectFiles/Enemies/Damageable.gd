@@ -1,8 +1,9 @@
 extends Node
 
-class_name Hit
+class_name Damageable
 
 signal  on_hit(node : Node, damage_taken : int, knockback_direction : Vector2)
+
 
 @export var health : float = 20 :
 	get:

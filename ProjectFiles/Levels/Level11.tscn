@@ -15,12 +15,6 @@ offset_right = 321.0
 offset_bottom = 210.0
 color = Color(0, 0, 0, 1)
 
-[node name="Player" parent="ColorRect" instance=ExtResource("2_vja7t")]
-position = Vector2(78, 119)
-
-[node name="FollowCamera2" parent="ColorRect/Player" index="7"]
-visible = false
-
 [node name="TileMap3" type="TileMap" parent="."]
 position = Vector2(-65, 228)
 tile_set = ExtResource("2_13wmf")
@@ -73,11 +67,17 @@ text = "Main Menu"
 stream = ExtResource("5_pr20d")
 autoplay = true
 
+[node name="Player" parent="." instance=ExtResource("2_vja7t")]
+position = Vector2(78, 119)
+
+[node name="FollowCamera2" parent="Player" index="7"]
+visible = false
+
 [node name="HUD" parent="." instance=ExtResource("6_qw7ya")]
 layer = 10
 visible = false
 
 [connection signal="pressed" from="MainButton" to="." method="_on_main_button_pressed"]
 
-[editable path="ColorRect/Player"]
-[editable path="ColorRect/Player/FollowCamera2"]
+[editable path="Player"]
+[editable path="Player/FollowCamera2"]

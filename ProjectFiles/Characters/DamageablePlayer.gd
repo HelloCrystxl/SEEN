@@ -16,7 +16,6 @@ func hit(damage : int):
 
 	if health <= 0:
 		emit_signal("playerdead")
-		get_tree().paused = true
+		#get_tree().paused = true
 		get_tree().change_scene_to_file("res://UI/GameOver.tscn")
 		get_parent().queue_free()
-

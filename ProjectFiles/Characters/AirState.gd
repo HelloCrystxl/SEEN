@@ -16,6 +16,7 @@ func state_process(delta):
 func state_input(event : InputEvent):
 	if(event.is_action_pressed("jump") && !has_double_jumped):
 		double_jump()
+	
 
 func on_exit():
 	if(next_state == landing_state):
@@ -26,3 +27,4 @@ func double_jump():
 	character.velocity.y = double_jump_velocity
 	playback.travel(double_jump_animation)
 	has_double_jumped = true
+

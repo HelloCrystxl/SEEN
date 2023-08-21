@@ -11,9 +11,8 @@ class_name GroundState
 @onready var buffer_timer : Timer = $BufferTimer
 
 func state_process(delta):
-	if(!character.is_on_floor() && buffer_timer.is_stopped()):
+	if(!character.is_on_floor()):#   && $BufferTimer
 		next_state = air_state
-	
 		
 
 func state_input(event : InputEvent):
@@ -23,7 +22,7 @@ func state_input(event : InputEvent):
 		attack()
 		
 func jump():
-	character.velocity.y = jump_velocity
+	character.velocity.y  = jump_velocity
 	next_state = air_state
 	playback.travel(jump_animation)
 
@@ -31,3 +30,6 @@ func attack():
 	next_state = attack_state
 	playback.travel(attack_node)
 	
+func _on_inturrupt_state(new_state):
+	new_state = next_state
+	pass # Replace with function body.
