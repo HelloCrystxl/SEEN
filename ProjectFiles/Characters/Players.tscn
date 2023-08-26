@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dbyi6frbc1jwj"]
+[gd_scene load_steps=56 format=3 uid="uid://dbyi6frbc1jwj"]
 
 [ext_resource type="Texture2D" uid="uid://clytqh16ybds5" path="res://Art/assets/Player/player.png" id="1_8efrt"]
 [ext_resource type="Script" path="res://Characters/Players.gd" id="1_m4sg7"]
@@ -765,6 +765,18 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hi11d"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fhphb"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b01d1"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3ny13"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0jdxh"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0fyl4"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8jiry"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_f02mi"]
 states/Start/position = Vector2(271, 100)
 states/XMove/node = SubResource("AnimationNodeBlendSpace1D_525ti")
@@ -779,8 +791,8 @@ states/jump_end/node = SubResource("AnimationNodeAnimation_5btur")
 states/jump_end/position = Vector2(623, 100)
 states/jump_start/node = SubResource("AnimationNodeAnimation_tyqhb")
 states/jump_start/position = Vector2(410.75, 7)
-transitions = ["jump_start", "jump_end", SubResource("AnimationNodeStateMachineTransition_4cvhe"), "jump_start", "jump_double", SubResource("AnimationNodeStateMachineTransition_84o71"), "jump_double", "jump_end", SubResource("AnimationNodeStateMachineTransition_sf6nt"), "jump_end", "XMove", SubResource("AnimationNodeStateMachineTransition_yej4c"), "Start", "XMove", SubResource("AnimationNodeStateMachineTransition_xvd3y"), "XMove", "jump_start", SubResource("AnimationNodeStateMachineTransition_dui2r"), "XMove", "attack1", SubResource("AnimationNodeStateMachineTransition_xjkkp"), "attack1", "XMove", SubResource("AnimationNodeStateMachineTransition_4rmq8"), "attack1", "attack2", SubResource("AnimationNodeStateMachineTransition_qbrmf"), "attack2", "XMove", SubResource("AnimationNodeStateMachineTransition_hi11d")]
-graph_offset = Vector2(-70.25, -19)
+transitions = ["jump_start", "jump_end", SubResource("AnimationNodeStateMachineTransition_4cvhe"), "jump_start", "jump_double", SubResource("AnimationNodeStateMachineTransition_84o71"), "jump_double", "jump_end", SubResource("AnimationNodeStateMachineTransition_sf6nt"), "jump_end", "XMove", SubResource("AnimationNodeStateMachineTransition_yej4c"), "Start", "XMove", SubResource("AnimationNodeStateMachineTransition_xvd3y"), "XMove", "jump_start", SubResource("AnimationNodeStateMachineTransition_dui2r"), "XMove", "attack1", SubResource("AnimationNodeStateMachineTransition_xjkkp"), "attack1", "XMove", SubResource("AnimationNodeStateMachineTransition_4rmq8"), "attack1", "attack2", SubResource("AnimationNodeStateMachineTransition_qbrmf"), "attack2", "XMove", SubResource("AnimationNodeStateMachineTransition_hi11d"), "attack1", "jump_start", SubResource("AnimationNodeStateMachineTransition_fhphb"), "jump_start", "attack1", SubResource("AnimationNodeStateMachineTransition_b01d1"), "attack1", "jump_double", SubResource("AnimationNodeStateMachineTransition_3ny13"), "jump_double", "attack1", SubResource("AnimationNodeStateMachineTransition_0jdxh"), "attack1", "jump_end", SubResource("AnimationNodeStateMachineTransition_0fyl4"), "jump_end", "attack1", SubResource("AnimationNodeStateMachineTransition_8jiry")]
+graph_offset = Vector2(57.75, 61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjs2t"]
 size = Vector2(16, 18)
@@ -844,7 +856,7 @@ return_state = NodePath("../Ground")
 can_move = false
 
 [node name="Timer" type="Timer" parent="CharacterStateMachine/Attack"]
-wait_time = 0.1
+wait_time = 0.05
 one_shot = true
 
 [node name="Sword" type="Area2D" parent="." node_paths=PackedStringArray("player", "facing_shape")]

@@ -5,7 +5,7 @@ extends Node2D
 func _ready():
 	$HUD.level(level_num)
 	set_coins_label()
-	for coin in $Coins.get_children():
+	for coin in $Coins.get_children(): 
 		coin.coin_collected.connect(_on_coins_collected)
 		
 func _on_coins_collected():

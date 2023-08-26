@@ -58,6 +58,24 @@ level = "res://Levels/Level03.tscn"
 
 [node name="Coins" type="Node" parent="."]
 
+[node name="Coin2" parent="Coins" instance=ExtResource("6_e0cuo")]
+position = Vector2(208, 32)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("6_e0cuo")]
+position = Vector2(288, -16)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("6_e0cuo")]
+position = Vector2(368, 34)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("6_e0cuo")]
+position = Vector2(440, 98)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("6_e0cuo")]
+position = Vector2(138, 15)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("6_e0cuo")]
+position = Vector2(376, -64)
+
 [node name="Coin" parent="Coins" instance=ExtResource("6_e0cuo")]
 position = Vector2(303, 98)
 
@@ -66,26 +84,6 @@ position = Vector2(623, -53)
 
 [node name="Eyeball2" parent="." groups=["Enemy"] instance=ExtResource("6_fh4ef")]
 position = Vector2(528, -189)
-
-[node name="Coins" type="Node" parent="Eyeball2"]
-
-[node name="Coin" parent="Eyeball2/Coins" instance=ExtResource("6_e0cuo")]
-position = Vector2(208, 32)
-
-[node name="Coin2" parent="Eyeball2/Coins" instance=ExtResource("6_e0cuo")]
-position = Vector2(288, -16)
-
-[node name="Coin3" parent="Eyeball2/Coins" instance=ExtResource("6_e0cuo")]
-position = Vector2(368, 34)
-
-[node name="Coin5" parent="Eyeball2/Coins" instance=ExtResource("6_e0cuo")]
-position = Vector2(440, 98)
-
-[node name="Coin6" parent="Eyeball2/Coins" instance=ExtResource("6_e0cuo")]
-position = Vector2(138, 15)
-
-[node name="Coin4" parent="Eyeball2/Coins" instance=ExtResource("6_e0cuo")]
-position = Vector2(376, -64)
 
 [node name="Player" parent="." instance=ExtResource("4_k0gi2")]
 position = Vector2(487, 11)
